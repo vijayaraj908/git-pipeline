@@ -12,8 +12,19 @@ span.textContent = taskText;
 checkbox.addEventListener("change", () => {
 span.classList.toggle("completed", checkbox.checked);
 });
+const actions = document.createElement("div");
+actions.classList.add("actions");
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "Delete";
+deleteBtn.classList.add("delete-btn");
+
+deleteBtn.addEventListener("click", () => {
+li.remove();
+});
+actions.appendChild(deleteBtn);
 li.appendChild(checkbox);
 li.appendChild(span);
+li.appendChild(actions);
 taskList.appendChild(li);
 }
 function addTask() {
