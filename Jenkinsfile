@@ -4,7 +4,7 @@ stages {
 stage('Checkout') {
 steps {
 git(
-url: 'GITHUB URL',
+url: 'https://github.com/vijayaraj908/git-pipeline.git',
 branch: 'main',
 credentialsId: 'github-pat'
 )
